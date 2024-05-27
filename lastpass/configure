@@ -1,0 +1,10 @@
+#!/bin/bash
+
+attempt_lastpass_login() {
+    read -p "Enter your LastPass username: " LPASS_USERNAME
+    lpass login "$LPASS_USERNAME"
+}
+
+until attempt_lastpass_login; do
+    echo "Login failed! REQUIRED will retry until successful \n"
+done

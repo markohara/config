@@ -1,4 +1,6 @@
 #!/bin/bash
 
+BREWFILE="$(dirname "$(realpath "$0")")/Brewfile"
+
 # Reapply config in Brewfile
-brew bundle --file ./Brewfile
+brew bundle --file $BREWFILE

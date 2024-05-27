@@ -2,3 +2,6 @@
 
 # Configure Brew
 ./brew/setup
+
+# Configure Lastpass CLI
+./lastpass/configure
