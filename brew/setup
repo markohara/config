@@ -1,0 +1,8 @@
+#!/bin/bash
+
+BREWFILE="$(dirname "$(realpath "$0")")/Brewfile"
+# Setup Brew if needed
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install brew bundle and run it
+brew bundle --file $BREWFILE

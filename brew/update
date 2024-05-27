@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Reapply config in Brewfile
+brew bundle --file ./Brewfile
