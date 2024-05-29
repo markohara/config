@@ -89,6 +89,18 @@
           }
         }
       }
+    },
+    "cask": {
+      "arc": {
+        "version": "1.44.2,50412",
+        "options": {
+          "full_name": "arc",
+          "args": {
+            "appdir": "/Applications",
+            "require_sha": true
+          }
+        }
+      }
     }
   },
   "system": {

@@ -1,2 +1,52 @@
+cask_args appdir: "/Applications"
+
+# enviroment setup
 brew "stow"
 brew "lastpass-cli"
+
+# system
+cask "lastpass" unless system "/Applications/Lastpass.app"
+cask "karabiner-elements" unless system "/Applications/Karabiner-Elements.app"
+cask "logitech-options" unless system "/Applications/Logi\ Options.app"
+cask "nordvpn" unless system "/Applications/NordVPN.app"
+
+# terminal config
+cask "alacritty" unless system "/Applications/Alacritty.app"
+brew "tmux"
+brew "nvim"
+
+# cli tools
+brew "git"
+brew "thefuck"
+brew "fzf"
+brew "tldr"
+brew "zoxide"
+brew "bat"
+brew "git-delta"
+brew "eza"
+brew "tig"
+brew "tree"
+brew "jq"
+
+# tunneling
+cask "ngrok"
+
+# tiling window manager https://github.com/koekeishiya/yabai
+brew "koekeishiya/formulae/yabai" 
+
+# Hotkey deamon, homebrew service docs https://github.com/koekeishiya/skhd
+brew "koekeishiya/formulae/skhd"
+
+# productivity
+cask "raycast" unless system "/Applications/Raycast.app"
+cask "arc" unless system "/Applications/Arc.app"
+cask "notion" unless system "/Applications/Notion.app"
+
+# communication
+cask "zoom" unless system "/Applications/zoom.us.app"
+cask "whatsapp" unless system "Applications/WhatsApp.app"
+
+# ios
+brew "xcodes" unless system "/Applications/Xcodes.app"
+brew "mise" # for tuist install
+# TODO: add fastlane via bundler at some point
