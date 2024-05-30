@@ -3,4 +3,24 @@
 BREWFILE="$(dirname "$(realpath "$0")")/Brewfile"
 
 # Reapply config in Brewfile
-brew bundle --file $BREWFILE
+tempfile=$(mktemp)
+
+# Run the brew bundle command and tee the output to the temp file
+brew bundle --file $BREWFILE 2>&1 | tee "$tempfile"
+
+# Handle fake errors
+installed_errors=$(grep -c "Error: It seems there is already an App at" "$tempfile")
+status=0
+
+if grep -q "Homebrew Bundle failed!" "$tempfile"; then
+  failed_count=$(grep "Homebrew Bundle failed!" "$tempfile" | grep -o '[0-9]*')
+
+  if [ "$installed_errors" -eq "$failed_count" ]; then
+    echo -e "\nAll reported errors are due to already installed apps. Ignoring these errors and exiting successfully.\n"
+  else
+    status=1
+  fi
+fi
+
+rm "$tempfile"
+exit $status

@@ -15,6 +15,7 @@ cask "alacritty" unless system "/Applications/Alacritty.app"
 brew "powerlevel10k"
 brew "tmux"
 brew "nvim"
+cask "font-meslo-lg-nerd-font"
 
 # cli tools
 brew "git"
