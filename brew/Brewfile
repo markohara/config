@@ -20,6 +20,7 @@ cask "font-meslo-lg-nerd-font"
 # cli tools
 brew "git"
 brew "thefuck"
+brew "fd"
 brew "fzf"
 brew "tldr"
 brew "zoxide"
