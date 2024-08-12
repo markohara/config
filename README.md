@@ -1,15 +1,9 @@
 # config
 
-Used to provision a mac with my application stack
+Used to provision my application stack, to configure execute the platform of choice
 
 ```
-./setup
-```
-
-to update brew applications;
-
-```
-./brew/update
+./macos
 ```
 
 ### Manual Steps

@@ -1,13 +1,11 @@
 #!/bin/bash
 
 BREWFILE="$(dirname "$(realpath "$0")")/Brewfile"
-# Setup Brew if needed
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install brew bundle and run it
 tempfile=$(mktemp)
 
-# Run the brew bundle command and tee the output to the temp file
 brew bundle --file $BREWFILE 2>&1 | tee "$tempfile"
 
 # Handle fake errors

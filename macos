@@ -1,0 +1,43 @@
+#!/bin/bash
+set -e
+
+UTILS="$(PWD)/utils"
+MAC_CONFIG="$(PWD)/os/mac"
+TOOLS="$(PWD)/tools"
+
+TOOLS_FILE="$MAC_CONFIG/.macos_tools"
+
+export TOOLS TOOLS_FILE
+
+usage() {
+    echo "Usage: $0 [update] [--skip task1,task2,...]"
+    echo "  update       Run the update process"
+    echo "  --skip       Comma-separated list of tasks to skip (brew, zsh, lastpass)"
+    exit 1
+}
+
+# Parse command-line arguments
+update=false
+skip_tasks=""
+
+while [[ $# -gt 0 ]]; do
+    case $1 in
+        update)
+            update=true
+            shift
+            ;;
+        --skip)
+            skip_tasks=$2
+            shift 2
+            ;;
+        *)
+            usage
+            ;;
+    esac
+done
+
+if $update; then
+    $UTILS/update.sh --skip "$skip_tasks"
+else
+    $UTILS/setup.sh --skip "$skip_tasks"
+fi
