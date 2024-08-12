@@ -30,6 +30,7 @@ brew "eza"
 brew "tig"
 brew "tree"
 brew "jq"
+brew "sl"
 
 # tunneling
 cask "ngrok"
