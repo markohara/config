@@ -31,6 +31,7 @@ brew "tig"
 brew "tree"
 brew "jq"
 brew "sl"
+brew "lazygit"
 
 # tunneling
 cask "ngrok"
