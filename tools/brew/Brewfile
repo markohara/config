@@ -16,7 +16,7 @@ cask "nordvpn" unless system "/Applications/NordVPN.app"
 # terminal config
 cask "wezterm" unless system "/Applications/Wezterm.app"
 cask "alacritty" unless system "/Applications/Alacritty.app"
-brew "starship"
+brew "jandedobbeleer/oh-my-posh/oh-my-posh"
 brew "tmux"
 brew "nvim"
 cask "font-jetbrains-mono-nerd-font"
