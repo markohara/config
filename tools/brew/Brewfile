@@ -1,5 +1,8 @@
 cask_args appdir: "/Applications"
 
+# tap "nikitabobko/tap/aerospace"
+# tap "FelixKratz/formulae"
+
 # enviroment setup
 brew "stow"
 brew "lastpass-cli"
@@ -11,11 +14,12 @@ cask "logitech-options" unless system "/Applications/Logi\ Options.app"
 cask "nordvpn" unless system "/Applications/NordVPN.app"
 
 # terminal config
+cask "wezterm" unless system "/Applications/Wezterm.app"
 cask "alacritty" unless system "/Applications/Alacritty.app"
-brew "powerlevel10k" # managed by oh my zsh
+brew "starship"
 brew "tmux"
 brew "nvim"
-cask "font-meslo-lg-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
 
 # cli tools
 brew "git"
@@ -30,22 +34,29 @@ brew "eza"
 brew "tig"
 brew "tree"
 brew "jq"
+brew "yq"
 brew "sl"
 brew "lazygit"
+brew "grep"
+brew "ripgrep"
+brew "gum"
+brew "gawk"
+brew "gnu-sed"
+brew "shellcheck"
+brew "ranger"
 
 # tunneling
 cask "ngrok"
 
-# tiling window manager https://github.com/koekeishiya/yabai
-brew "koekeishiya/formulae/yabai" 
-
-# Hotkey deamon, homebrew service docs https://github.com/koekeishiya/skhd
-brew "koekeishiya/formulae/skhd"
+# Window Manager
+cask "nikitabobko/tap/aerospace" unless system "/Applications/Aerospace.app"
+brew "FelixKratz/formulae/sketchybar"
 
 # productivity
 cask "raycast" unless system "/Applications/Raycast.app"
 cask "arc" unless system "/Applications/Arc.app"
 cask "notion" unless system "/Applications/Notion.app"
+cask "shortcat" unless system "/Application/Shortcat.app"
 
 # communication
 cask "zoom" unless system "/Applications/zoom.us.app"
@@ -53,5 +64,4 @@ cask "whatsapp" unless system "Applications/WhatsApp.app"
 
 # ios
 brew "xcodes" unless system "/Applications/Xcodes.app"
-brew "mise" # for tuist install
-# TODO: add fastlane via bundler at some point
+brew "mise"
