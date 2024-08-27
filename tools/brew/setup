@@ -2,6 +2,7 @@
 
 BREWFILE="$(dirname "$(realpath "$0")")/Brewfile"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+export PATH=/opt/homebrew/bin:$PATH
 
 # Install brew bundle and run it
 tempfile=$(mktemp)
