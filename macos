@@ -1,9 +1,10 @@
 #!/bin/bash
 set -e
 
-UTILS="$(PWD)/utils"
-MAC_CONFIG="$(PWD)/os/mac"
-TOOLS="$(PWD)/tools"
+PROJECT_DIR="$(dirname "$(realpath "$0")")"
+UTILS="$PROJECT_DIR/utils"
+MAC_CONFIG="$PROJECT_DIR/os/mac"
+TOOLS="$PROJECT_DIR/tools"
 
 TOOLS_FILE="$MAC_CONFIG/.macos_tools"
 
