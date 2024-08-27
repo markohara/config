@@ -1,7 +1,6 @@
 cask_args appdir: "/Applications"
 
-# tap "nikitabobko/tap/aerospace"
-# tap "FelixKratz/formulae"
+tap "FelixKratz/formulae"
 
 # enviroment setup
 brew "stow"

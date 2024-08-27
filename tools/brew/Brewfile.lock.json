@@ -1364,6 +1364,8 @@
         }
       },
       "jandedobbeleer/oh-my-posh/oh-my-posh": {
+        "version": "23.8.0",
+        "bottle": false
       }
     },
     "cask": {
@@ -1510,6 +1512,11 @@
             "appdir": "/Applications"
           }
         }
+      }
+    },
+    "tap": {
+      "felixkratz/formulae": {
+        "revision": "135452bb73f5fee5b31ca726b9eecdedb5f6492e"
       }
     }
   },
