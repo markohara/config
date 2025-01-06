@@ -13,13 +13,13 @@ cask "logitech-options" unless system "/Applications/Logi\ Options.app"
 cask "nordvpn" unless system "/Applications/NordVPN.app"
 
 # terminal config
-cask "wezterm" unless system "/Applications/Wezterm.app"
+# cask "wezterm" unless system "/Applications/Wezterm.app"
+cask "ghostty" unless system "/Applications/Ghostty.app"
 # cask "alacritty" unless system "/Applications/Alacritty.app"
 brew "jandedobbeleer/oh-my-posh/oh-my-posh"
 brew "tmux"
 brew "nvim"
 cask "font-jetbrains-mono-nerd-font"
-
 # cli tools
 brew "git"
 brew "thefuck"
@@ -52,6 +52,7 @@ cask "ngrok"
 # Window Manager
 cask "nikitabobko/tap/aerospace" unless system "/Applications/Aerospace.app"
 brew "FelixKratz/formulae/sketchybar"
+brew "FelixKratz/formulae/borders"
 
 # productivity
 cask "raycast" unless system "/Applications/Raycast.app"
