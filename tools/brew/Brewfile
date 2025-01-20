@@ -8,7 +8,8 @@ brew "lastpass-cli"
 
 # system
 cask "lastpass" unless system "/Applications/Lastpass.app"
-cask "karabiner-elements" unless system "/Applications/Karabiner-Elements.app"
+# cask "karabiner-elements" unless system "/Applications/Karabiner-Elements.app"
+cask "hammerspoon" unless system "/Applications/Hammerspoon.app"
 cask "logitech-options" unless system "/Applications/Logi\ Options.app"
 cask "nordvpn" unless system "/Applications/NordVPN.app"
 
