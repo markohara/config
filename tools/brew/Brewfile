@@ -68,3 +68,6 @@ cask "whatsapp" unless system "Applications/WhatsApp.app"
 # ios
 brew "xcodes" unless system "/Applications/Xcodes.app"
 brew "mise"
+
+# editors
+cask "cursor" unless system "/Applications/Cursor.app"
