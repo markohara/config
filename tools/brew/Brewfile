@@ -46,6 +46,7 @@ brew "gnu-sed"
 brew "shellcheck"
 brew "ranger"
 brew "neofetch"
+brew "entr"
 
 # tunneling
 cask "ngrok"
