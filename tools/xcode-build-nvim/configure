@@ -1,0 +1,4 @@
+#!/bin/bash
+
+gem install xcodeproj
+pipx install pymobiledevice3

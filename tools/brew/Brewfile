@@ -76,3 +76,11 @@ brew "mise"
 
 # editors
 cask "cursor" unless system "/Applications/Cursor.app"
+
+
+# temp xcode-build nvim dependencies
+brew "xcode-build-server"
+brew "xcbeautify"
+brew "ruby"
+brew "pipx"
+brew "rg"
