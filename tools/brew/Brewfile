@@ -17,6 +17,10 @@ cask "nordvpn" unless system "/Applications/NordVPN.app"
 # cask "wezterm" unless system "/Applications/Wezterm.app"
 cask "ghostty" unless system "/Applications/Ghostty.app"
 # cask "alacritty" unless system "/Applications/Alacritty.app"
+
+# Dev Env
+cask "xcodes"
+
 brew "jandedobbeleer/oh-my-posh/oh-my-posh"
 brew "tmux"
 brew "nvim"
