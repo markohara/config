@@ -25,6 +25,7 @@ cask "proxyman"
 brew "jandedobbeleer/oh-my-posh/oh-my-posh"
 brew "tmux"
 brew "nvim"
+brew "node" #Apprently needed for nvim?
 cask "font-jetbrains-mono-nerd-font"
 # cli tools
 brew "git"
