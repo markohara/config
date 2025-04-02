@@ -1,0 +1,8 @@
+#!/bin/bash
+
+
+if [[ ! -e "/Library/PrivilegedHelperTools/com.proxyman.NSProxy.HelperTool" ]]; then
+    sudo /Applications/Proxyman.app/Contents/MacOS/proxyman --install-privileged-components
+fi
+
+echo 'Proxyman helper tools configured'
