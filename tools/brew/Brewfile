@@ -22,6 +22,7 @@ cask "ghostty" unless system "/Applications/Ghostty.app"
 cask "xcodes"
 cask "proxyman"
 cask "insomnia"
+cask "fork"
 brew "chisel"
 
 brew "jandedobbeleer/oh-my-posh/oh-my-posh"
