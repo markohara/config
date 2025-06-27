@@ -24,6 +24,7 @@ cask "proxyman"
 cask "insomnia"
 cask "fork"
 brew "chisel"
+brew "kin"
 
 brew "jandedobbeleer/oh-my-posh/oh-my-posh"
 brew "tmux"
