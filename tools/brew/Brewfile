@@ -83,6 +83,8 @@ brew "mise"
 # editors
 cask "cursor" unless system "/Applications/Cursor.app"
 
+# Programming languages
+brew "go"
 
 # temp xcode-build nvim dependencies
 brew "xcode-build-server"
