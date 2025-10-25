@@ -57,6 +57,8 @@ brew "shellcheck"
 brew "ranger"
 brew "neofetch"
 brew "entr"
+brew "slides" #Markdown slides
+brew "parallel" #GNU Parallel
 
 # tunneling
 cask "ngrok"
