@@ -60,6 +60,7 @@ brew "neofetch"
 brew "entr"
 brew "slides" #Markdown slides
 brew "parallel" #GNU Parallel
+brew "cloc"
 
 # tunneling
 cask "ngrok"
