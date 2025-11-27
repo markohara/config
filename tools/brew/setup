@@ -4,10 +4,31 @@ BREWFILE="$(dirname "$(realpath "$0")")/Brewfile"
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 export PATH=/opt/homebrew/bin:$PATH
 
+# brew services to configure
+services=(
+    borders
+    sketchybar
+)
+
 # Install brew bundle and run it
 tempfile=$(mktemp)
 
 brew bundle --file $BREWFILE 2>&1 | tee "$tempfile"
+
+echo "Managing Homebrew services..."
+
+is_installed() {
+    brew list --formula --versions "$1" >/dev/null 2>&1 || brew list --cask --versions "$1" >/dev/null 2>&1
+}
+
+for svc in "${services[@]}"; do
+    if is_installed "$svc"; then
+        brew services enable "$svc" >/dev/null 2>&1 || true
+        brew services start "$svc" || brew services restart "$svc"
+    else
+        echo "Skipped $svc (not installed)"
+    fi
+done
 
 # Handle fake errors
 installed_errors=$(grep -c "Error: It seems there is already an App at" "$tempfile")
