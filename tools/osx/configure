@@ -1,5 +1,40 @@
 #!/bin/bash
 
+# Disable silly screenshot preview thumbnails
 defaults write com.apple.screencapture show-thumbnail -bool false
 killall SystemUIServer
 
+# Hide the dock and disable animations
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide-time-modifier -float 0
+defaults write com.apple.dock autohide-delay -float 0
+
+# Show indicator lights for open applications in the Dock
+defaults write com.apple.dock show-indicator-lights -bool true
+
+# Disable show recents in Dock
+defaults write com.apple.dock "show-recents" -bool "false"
+
+# Set the icon size of Dock items to 36 pixels
+defaults write com.apple.dock tilesize -int 36
+
+# Minimize windows into their application’s icon
+defaults write com.apple.dock minimize-to-application -bool true
+
+# Disable animation opening applications from the Dock
+defaults write com.apple.dock launchanim -bool false
+
+# Enable reduced reduceMotion
+defaults write com.apple.universalaccess reduceMotion -bool true
+
+# Customize key repeat and hold behavior for VIM
+# ( System restarted required )
+# Set keyboard repeat rate
+sudo defaults write -g InitialKeyRepeat -int 1
+sudo defaults write -g KeyRepeat -int 1
+
+# Disable accents menu
+defaults write -g ApplePressAndHoldEnabled -bool false
+echo "Restart required to apply changes."
+
+killall Dock
