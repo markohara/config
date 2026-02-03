@@ -19,7 +19,7 @@ cask "ghostty" unless system "/Applications/Ghostty.app"
 # cask "alacritty" unless system "/Applications/Alacritty.app"
 
 # Dev Env
-cask "xcodes"
+cask "xcodes-app"
 cask "proxyman"
 cask "insomnia"
 cask "fork"
