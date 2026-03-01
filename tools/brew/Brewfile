@@ -28,7 +28,7 @@ cask "virtualbox"
 brew "chisel"
 brew "kin"
 
-brew "jandedobbeleer/oh-my-posh/oh-my-posh"
+brew "oh-my-posh"
 brew "tmux"
 brew "nvim"
 brew "node" #Apprently needed for nvim?
