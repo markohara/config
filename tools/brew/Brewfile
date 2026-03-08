@@ -1,6 +1,8 @@
 cask_args appdir: "/Applications"
 
 tap "FelixKratz/formulae"
+tap "anomalyco/tap"
+tap "oven-sh/bun"
 
 # enviroment setup
 brew "stow"
@@ -12,6 +14,7 @@ cask "lastpass" unless system "/Applications/Lastpass.app"
 cask "hammerspoon" unless system "/Applications/Hammerspoon.app"
 cask "logitech-options" unless system "/Applications/Logi\ Options.app"
 cask "nordvpn" unless system "/Applications/NordVPN.app"
+# brew "kanata"
 
 # terminal config
 # cask "wezterm" unless system "/Applications/Wezterm.app"
@@ -27,6 +30,8 @@ cask "sf-symbols"
 cask "virtualbox"
 brew "chisel"
 brew "kin"
+brew "opencode"
+brew "oven-sh/bun/bun"
 
 brew "oh-my-posh"
 brew "tmux"
