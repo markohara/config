@@ -1,0 +1,17 @@
+#!/bin/bash
+
+if ! gh auth status >/dev/null 2>&1; then
+    gh auth login
+fi
+
+EXTENSIONS_FILE="$(dirname "$(realpath "$0")")/extensions"
+installed=$(gh extension list 2>/dev/null)
+
+while read -r extension; do
+    [[ -z "$extension" ]] && continue
+    if ! echo "$installed" | grep -q "$extension"; then
+        gh extension install "$extension"
+    fi
+done < "$EXTENSIONS_FILE"
+
+echo "GitHub CLI configured"

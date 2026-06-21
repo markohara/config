@@ -13,7 +13,7 @@ services=(
 # Install brew bundle and run it
 tempfile=$(mktemp)
 
-brew bundle --file $BREWFILE 2>&1 | tee "$tempfile"
+HOMEBREW_NO_REQUIRE_TAP_TRUST=1 brew bundle --file $BREWFILE 2>&1 | tee "$tempfile"
 
 echo "Managing Homebrew services..."
 
